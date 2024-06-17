@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
-
+float c(float a, float b){
+	if (a>=3){
+		return b*0.80;
+	}else{
+		return b*0.90;
+	}
+	
+}
 int main() {
 	float compratotal;
 	float numerodecamisas;
@@ -9,14 +16,9 @@ int main() {
 	cin >>numerodecamisas;
 	cout<<"Escriba el costo final: ";
 	cin>>compratotal;
-	if (numerodecamisas>=3) {
-		pagofinal = compratotal*0.80;
-		cout<<"Su costo final a pagar sera: ";
-	} else {
-		pagofinal = compratotal*0.90;
-		cout<<"Su costo final a pagar sera: ";
-	}
-	cout << pagofinal << endl;
+	pagofinal=c( numerodecamisas, compratotal);
+	cout<<"LA CANTIDAD FINAL A PAGAR ES: " <<pagofinal<< endl;
+	
 	return 0;
 }
 
