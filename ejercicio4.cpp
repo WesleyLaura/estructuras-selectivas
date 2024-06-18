@@ -1,22 +1,23 @@
 #include <iostream>
 using namespace std;
+ float c( float x, float y){
+ 	if (x>=74){
+ 		return y*0.80;
+	 } else {
+	 	return y*0.85;
+	 }
+ }
 
 int main() {
 	float compratotal;
-	float numeroescogido;
+	float numero;
 	float pagofinal;
-	cout<<"Escriba el numero que ha escogido: ";
-	cin >>numeroescogido;
-	cout<<"Escriba su compra total: ";
+	cout<<"INGRESE EL NUMERO ESCOGIDO: "; 
+	cin>>numero;
+	cout<<"INGRESE COMPRA TOTAL: "; 
 	cin>>compratotal;
-	if (numeroescogido>=74) {
-		pagofinal = compratotal*0.80;
-		cout<<"Su costo final a pagar sera: ";
-	} else {
-		pagofinal = compratotal*0.85;
-		cout<<"Su costo final a pagar sera: ";
-	}
-	cout << pagofinal << endl;
+	cout<<"LA COMPRA FINAL A PAGAR ES : "<<c(numero,compratotal)<<endl;
+	
 	return 0;
 }
 
