@@ -1,6 +1,21 @@
 #include <iostream>
 #include <windows.h>
 using namespace std;
+float c( char g, int e){
+	float c;
+	switch (g){
+		case 'M':
+			c=(210-e)/10;
+			break;
+		case 'F':
+			c=(220-e)/10;
+			break;
+		default :
+			c=1;		
+			
+	}
+	return c;
+}
 
 int main() { 
     int edad;
@@ -9,19 +24,13 @@ int main() {
 	SetConsoleOutputCP(CP_UTF8);
     cout << "Ingrese su edad: ";
     cin >> edad;
-    cout << "Ingrese su sexo (M para masculino, F para femenino): ";
+    cout << "Ingrese su sexo ('M' para masculino, 'F' para femenino): ";
     cin >> sexo;
-
-    if (sexo == 'F') {
-        numPulsaciones = (220 - edad) / 10;
-    } else if (sexo == 'M') {
-        numPulsaciones = (210 - edad) / 10;
-    } else {
-        cout << "Sexo no válido " << endl;
-        return 0; 
-    }
-
-    cout << "El número de pulsaciones por cada 10 segundos de ejercicio aeróbico es: " << numPulsaciones << endl;
-
-    return 0;
+    numPulsaciones=c(sexo, edad);
+    if ( sexo== 'F' || sexo=='M'){
+    	cout << "El número de pulsaciones por cada 10 segundos de ejercicio aeróbico es: " << numPulsaciones << endl;
+	}else{
+		cout<<"SEXO INVÁLIDO!!!";
+	}
+   return 0;
 }
