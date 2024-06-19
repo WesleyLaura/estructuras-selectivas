@@ -10,8 +10,7 @@ float c( char g, int e){
 		case 'F':
 			c=(220-e)/10;
 			break;
-		default :
-			c=1;		
+				
 			
 	}
 	return c;
@@ -22,8 +21,13 @@ int main() {
     char sexo;
     float numPulsaciones;
 	SetConsoleOutputCP(CP_UTF8);
-    cout << "Ingrese su edad: ";
+
+    cout << "Ingrese su edad:\n ";
     cin >> edad;
+    while (edad<0){
+    	cout<<"ERROR\n INGRESE EDAD VÁLIDA"<<endl;
+    	cin>>edad;
+	} 
     cout << "Ingrese su sexo ('M' para masculino, 'F' para femenino): ";
     cin >> sexo;
     numPulsaciones=c(sexo, edad);
