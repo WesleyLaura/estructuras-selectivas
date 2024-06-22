@@ -3,10 +3,10 @@
 
 using namespace std;
 
-int main() {
+int numero1, numero2, numero3;
+void salida() {
 	SetConsoleOutputCP(CP_UTF8);
-    int numero1, numero2, numero3;
-    cout << "Ingrese el numero a vereficar si es múltilplo de los dos siguientes numeros a ingresar (x°): ";
+	cout << "Ingrese el numero a vereficar si es múltilplo de los dos siguientes numeros a ingresar (x°): ";
     cin >> numero1;
     cout << "Ingrese el segundo numero (y): ";
     cin >> numero2;
@@ -23,6 +23,8 @@ int main() {
 	else {
         cout << "El numero " << numero1 << " no es multiplo de " << numero2 << " y " << numero3 << "." << endl;
     }
-
+}
+int main() {
+	salida();
     return 0;
 }
